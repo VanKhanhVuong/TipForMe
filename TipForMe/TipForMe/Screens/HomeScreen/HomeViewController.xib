@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TipForMe" customModuleProvider="target">
             <connections>
+                <outlet property="todoButton" destination="gPF-mw-oFT" id="cdg-XF-jMB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPF-mw-oFT">
+                    <rect key="frame" x="165.66666666666666" y="729" width="62" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Todo"/>
+                    <connections>
+                        <action selector="todolistTapped:" destination="-1" eventType="touchUpInside" id="xSW-E1-b90"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gPF-mw-oFT" secondAttribute="bottom" constant="50" id="NgE-w6-Kgd"/>
+                <constraint firstItem="gPF-mw-oFT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jCY-dm-7v6"/>
+            </constraints>
             <point key="canvasLocation" x="33" y="-11"/>
         </view>
     </objects>
